@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="DeviceOrientationTestbed" default="make-all" basedir="./">
+        <target name="gen-wgt" depends="clean">
+                <!-- Creates the widget -->
+                <zip destfile="${basedir}/${app}.wgt">
+                        <zipfileset dir="${basedir}/src/" 
+                        excludes="
+                                **/.gitignore
+                                **/*.iml
+								**/Readme.md
+								**/*.psd
+								**/*.bak" />
+                </zip>
+        </target>
+
+        <target name="clean">
+            <!-- Removes precompiled widget -->
+            <delete quiet="true" file="${basedir}/${app}.wgt" />
+        </target>
+		
+		<target name="DeviceOrientation">
+			<antcall target="gen-wgt">
+				<param name="app" value="DeviceOrientationTestbed"/>
+			</antcall>
+		</target>
+		
+        
+        <target name="make-all">
+            <antcall target="DeviceOrientation" />
+        </target>
+        
+</project>

@@ -1,22 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <widget xmlns       = "http://www.w3.org/ns/widgets"
-        id          = "http://webinos.org/apps/deviceorientation/DO.wgt"
+        id          = "http://webinos.org/apps/deviceorientationTestbed"
         version     = "1.0"
         height      = "768"
         width       = "1024"
         viewmodes   = "fullscreen">
  
   <name short="device orientation">
-   webinos mobil orientation.
+   webinos device orientation testbed.
   </name>
 
   <description>
-    With this widget you can orientating webinos device.
+    With this widget you can test the device orientation feature of your webinos enabled device.
   </description>
 
   <author email="shanshan.yang@fokus.fraunhofer.de">Fokus Fokus</author>
-   <icon src="phones-128x128.png" />
-<!--   <icon src="Orientation.png" />-->
-
+  <icon src="phones-128x128.png" />
   <content src="index.html"/>
 </widget>
